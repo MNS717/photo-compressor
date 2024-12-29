@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Compressor</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-  <title>photo compressor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
   <h1>Photo Compressor</h1>
   <p>Select images to compress:</p>
   <input type="file" id="fileInput" accept="image/*" multiple>
-  
-  <!-- 圧縮率選択ボタン -->
   <div id="compressionOptions" style="margin: 20px; display: none;">
     <button data-quality="0.3">高品質</button>
     <button data-quality="0.6">低品質</button>
   </div>
-
-  <!-- ダウンロードリンクを表示するリスト -->
   <ul id="downloadLinks" style="list-style: none; padding: 0;"></ul>
-
   <canvas id="canvas" style="display: none;"></canvas>
   <script src="app.js"></script>
 </body>
