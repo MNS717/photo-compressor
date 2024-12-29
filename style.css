@@ -1,80 +1,103 @@
-/* 基本デザイン（PC向け） */
+/* 全体のスタイル */
 body {
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f6f8fc, #dce6f1); /* 背景に柔らかなグラデーション */
+  font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px;
-  background-color: #f4f4f9;
-}
-
-h1 {
-  font-size: 2.5em;
   color: #333;
 }
 
-input[type="file"], button {
-  margin-top: 20px;
+/* 見出し */
+h1 {
+  font-size: 2.5em;
+  color: #4a90e2; /* 青系で目立たせる */
+  margin-bottom: 20px;
+}
+
+/* 段落テキスト */
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* ファイル選択ボタン */
+input[type="file"] {
   padding: 10px 15px;
+  font-size: 1em;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* 圧縮率ボタン */
+button {
+  padding: 12px 20px;
   font-size: 1em;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-}
-
-button {
-  background-color: #007BFF;
+  background-color: #4a90e2;
   color: white;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #357abd;
 }
 
-/* ダウンロードリンクのスタイル */
+/* ダウンロードリンク */
 ul {
   list-style: none;
   padding: 0;
-  margin: 20px auto;
+  margin-top: 20px;
 }
 
 ul li {
   margin-bottom: 10px;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  color: white;
+  background-color: #50c878; /* エメラルドグリーン */
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #3da456;
+}
+
 /* スマホ画面対応 */
 @media screen and (max-width: 768px) {
   body {
-    padding: 10px; /* スマホ用の余白調整 */
+    padding: 10px;
   }
 
   h1 {
-    font-size: 1.8em; /* 見出しを小さく */
+    font-size: 1.8em;
   }
 
   input[type="file"], button {
-    width: 90%; /* フォームとボタンを画面幅に合わせる */
-    font-size: 1em;
+    width: 90%;
     margin-top: 15px;
   }
 
-  #compressionOptions {
-    display: flex;
-    flex-direction: column; /* ボタンを縦に並べる */
-    align-items: center; /* ボタンを中央揃え */
-  }
-
-  button {
-    margin-bottom: 10px; /* ボタン間に余白を追加 */
-  }
-
-  ul {
-    padding: 0;
-    margin-top: 20px;
-  }
-
   ul li {
-    font-size: 0.9em; /* リンクテキストを調整 */
-    margin-bottom: 10px;
+    font-size: 0.9em;
   }
 }
